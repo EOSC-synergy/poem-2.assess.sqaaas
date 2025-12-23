@@ -1,0 +1,72 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/ARGOeu/poem-2:
+      branch: master
+      repo: https://github.com/ARGOeu/poem-2
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/ARGOeu/poem-2 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-periwinkle-ant.sh
+        container: qc.acc_bluesy-thistle-toad
+  QC.Doc:
+    repos:
+      github.com/ARGOeu/poem-2 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaggy-white-fish.sh
+        container: qc.doc_randy-salmon-uakari
+      github.com/ARGOeu/poem-2 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-bronze-buzzard.sh
+        container: qc.doc_leaky-buff-akita
+      github.com/ARGOeu/poem-2 markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sickly-wisteria-molly.sh
+        container: qc.doc_blurry-wisteria-spider
+  QC.Lic:
+    repos:
+      github.com/ARGOeu/poem-2 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-khaki-bordeaux.sh
+        container: qc.lic_gamy-wisteria-frog
+  QC.Sec:
+    repos:
+      github.com/ARGOeu/poem-2 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-gamboge-newfoundland.sh
+        container: qc.sec_scummy-cobalt-shrew
+  QC.Sty:
+    repos:
+      github.com/ARGOeu/poem-2 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-azure-zonkey.sh
+        container: qc.sty_droopy-white-rattlesnake
+      github.com/ARGOeu/poem-2 hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-mauve-cichlid.sh
+        container: qc.sty_gummy-smalt-clam
+      github.com/ARGOeu/poem-2 jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-cardinal-spider.sh
+        container: qc.sty_thirsty-brass-whale
+  QC.Uni:
+    repos:
+      github.com/ARGOeu/poem-2 pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-amber-wildebeest.sh
+        container: qc.uni_scaly-cobalt-booby
+  QC.Ver:
+    repos:
+      github.com/ARGOeu/poem-2 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.clammy-turquoise-newt.sh
+        container: qc.ver_sunny-platinum-zebra
+timeout: 5400
