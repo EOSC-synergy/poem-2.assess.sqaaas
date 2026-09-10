@@ -5,7 +5,7 @@ config:
       branch: master
       repo: https://github.com/ARGOeu/poem-2
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: main
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/ARGOeu/poem-2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-periwinkle-ant.sh
-        container: qc.acc_bluesy-thistle-toad
+        - /usr/bin/env sh .sqa/script.onyx_amiable_kookaburra.sh
+        container: qc.acc_jasmine_mature_gnu
   QC.Doc:
     repos:
       github.com/ARGOeu/poem-2 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-white-fish.sh
-        container: qc.doc_randy-salmon-uakari
+        - /usr/bin/env sh .sqa/script.tan_practical_spider.sh
+        container: qc.doc_porcelain_reflective_otter
       github.com/ARGOeu/poem-2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-bronze-buzzard.sh
-        container: qc.doc_leaky-buff-akita
+        - /usr/bin/env sh .sqa/script.coral_clever_dormouse.sh
+        container: qc.doc_dusk_funny_jellyfish
       github.com/ARGOeu/poem-2 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-wisteria-molly.sh
-        container: qc.doc_blurry-wisteria-spider
+        - /usr/bin/env sh .sqa/script.clementine_plucky_moth.sh
+        container: qc.doc_fuchsia_dramatic_peacock
   QC.Lic:
     repos:
       github.com/ARGOeu/poem-2 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-khaki-bordeaux.sh
-        container: qc.lic_gamy-wisteria-frog
+        - /usr/bin/env sh .sqa/script.strawberry_stubborn_condor.sh
+        container: qc.lic_gray_witty_flounder
   QC.Sec:
     repos:
       github.com/ARGOeu/poem-2 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-gamboge-newfoundland.sh
-        container: qc.sec_scummy-cobalt-shrew
+        - /usr/bin/env sh .sqa/script.cobalt_cautious_flamingo.sh
+        container: qc.sec_byzantium_sad_anaconda
   QC.Sty:
     repos:
       github.com/ARGOeu/poem-2 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-azure-zonkey.sh
-        container: qc.sty_droopy-white-rattlesnake
+        - /usr/bin/env sh .sqa/script.cobalt_worried_kraken.sh
+        container: qc.sty_lime_upbeat_seahorse
       github.com/ARGOeu/poem-2 hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-mauve-cichlid.sh
-        container: qc.sty_gummy-smalt-clam
+        - /usr/bin/env sh .sqa/script.eggplant_curious_hydra.sh
+        container: qc.sty_viridian_balanced_kingfisher
       github.com/ARGOeu/poem-2 jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-cardinal-spider.sh
-        container: qc.sty_thirsty-brass-whale
+        - /usr/bin/env sh .sqa/script.strawberry_cheerful_heron.sh
+        container: qc.sty_ash_harmonious_komodo
   QC.Uni:
     repos:
       github.com/ARGOeu/poem-2 pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-amber-wildebeest.sh
-        container: qc.uni_scaly-cobalt-booby
+        - /usr/bin/env sh .sqa/script.cadet_lucky_catfish.sh
+        container: qc.uni_ruby_trustworthy_hamster
   QC.Ver:
     repos:
       github.com/ARGOeu/poem-2 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-turquoise-newt.sh
-        container: qc.ver_sunny-platinum-zebra
+        - /usr/bin/env sh .sqa/script.brown_bright_dingo.sh
+        container: qc.ver_pistachio_energetic_crow
 timeout: 5400
