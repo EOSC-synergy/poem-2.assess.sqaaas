@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/ARGOeu/poem-2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.onyx_amiable_kookaburra.sh
-        container: qc.acc_jasmine_mature_gnu
+        - /usr/bin/env sh .sqa/script.forest_fearless_jellyfish.sh
+        container: qc.acc_violet_meticulous_dormouse
   QC.Doc:
     repos:
       github.com/ARGOeu/poem-2 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.tan_practical_spider.sh
-        container: qc.doc_porcelain_reflective_otter
+        - /usr/bin/env sh .sqa/script.malachite_articulate_rabbit.sh
+        container: qc.doc_lagoon_ardent_chipmunk
       github.com/ARGOeu/poem-2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.coral_clever_dormouse.sh
-        container: qc.doc_dusk_funny_jellyfish
+        - /usr/bin/env sh .sqa/script.cinnabar_feisty_skunk.sh
+        container: qc.doc_crimson_lucky_mongoose
       github.com/ARGOeu/poem-2 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.clementine_plucky_moth.sh
-        container: qc.doc_fuchsia_dramatic_peacock
+        - /usr/bin/env sh .sqa/script.chili_affectionate_kiwi.sh
+        container: qc.doc_currant_dedicated_armadillo
   QC.Lic:
     repos:
       github.com/ARGOeu/poem-2 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.strawberry_stubborn_condor.sh
-        container: qc.lic_gray_witty_flounder
+        - /usr/bin/env sh .sqa/script.frost_artistic_gnu.sh
+        container: qc.lic_heather_plucky_toucan
   QC.Sec:
     repos:
       github.com/ARGOeu/poem-2 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.cobalt_cautious_flamingo.sh
-        container: qc.sec_byzantium_sad_anaconda
+        - /usr/bin/env sh .sqa/script.scarlet_perky_baboon.sh
+        container: qc.sec_lagoon_carefree_wolf
   QC.Sty:
     repos:
       github.com/ARGOeu/poem-2 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.cobalt_worried_kraken.sh
-        container: qc.sty_lime_upbeat_seahorse
+        - /usr/bin/env sh .sqa/script.mulberry_flexible_mink.sh
+        container: qc.sty_powder_sarcastic_cougar
       github.com/ARGOeu/poem-2 hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.eggplant_curious_hydra.sh
-        container: qc.sty_viridian_balanced_kingfisher
+        - /usr/bin/env sh .sqa/script.chocolate_mindful_quokka.sh
+        container: qc.sty_grege_intuitive_albatross
       github.com/ARGOeu/poem-2 jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.strawberry_cheerful_heron.sh
-        container: qc.sty_ash_harmonious_komodo
+        - /usr/bin/env sh .sqa/script.burgundy_tough_tortoise.sh
+        container: qc.sty_avocado_quirky_dragonfly
   QC.Uni:
     repos:
       github.com/ARGOeu/poem-2 pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.cadet_lucky_catfish.sh
-        container: qc.uni_ruby_trustworthy_hamster
+        - /usr/bin/env sh .sqa/script.nutmeg_vigilant_crow.sh
+        container: qc.uni_umber_playful_barracuda
   QC.Ver:
     repos:
       github.com/ARGOeu/poem-2 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.brown_bright_dingo.sh
-        container: qc.ver_pistachio_energetic_crow
+        - /usr/bin/env sh .sqa/script.cloud_pensive_hawk.sh
+        container: qc.ver_amaranth_worried_albatross
 timeout: 5400
